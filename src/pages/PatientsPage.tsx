@@ -17,7 +17,7 @@ export default function PatientsPage() {
 
   useEffect(() => { setPatients(patientStore.getAll()); }, []);
 
-  const [form, setForm] = useState({ name: '', age: '', gender: 'Male' as const, mobile: '', email: '', address: '', city: '', referredBy: '', uhid: '', notes: '' });
+  const [form, setForm] = useState({ name: '', age: '', gender: 'Male' as 'Male' | 'Female' | 'Other', mobile: '', email: '', address: '', city: '', referredBy: '', uhid: '', notes: '' });
 
   const resetForm = () => setForm({ name: '', age: '', gender: 'Male', mobile: '', email: '', address: '', city: '', referredBy: '', uhid: '', notes: '' });
 
